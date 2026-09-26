@@ -24,6 +24,8 @@ public class Student {
     @NotBlank(message = "Class is must")
     private String className;
 
+    private String email;
+
     public Long getId(){
         return id;
     }
@@ -54,5 +56,13 @@ public class Student {
 
     public void setClassName(String className){
         this.className = className;
+    }
+
+    public String getEmail(){
+        return email;
+    }
+
+    public void setEmail(String email){
+        this.email = email;
     }
 }
