@@ -9,6 +9,16 @@ public class MarkEventConsumer {
 
     @KafkaListener(topics = "marks-topic", groupId = "school-marks-json-group", containerFactory = "markEventKafkaListenerContainerFactory")
     public void consumerMarkEvent(MarkEvent markEvent){
-        System.out.println("=====Mark Event Received===== \n"+ "Student ID: "+ markEvent.getStudentId()+", Subject: "+markEvent.getSubject()+", "+markEvent.getMarks());
+        System.out.println("=====Mark Event Received=====");
+        System.out.println("STUDENT ID: "+markEvent.getStudentId());
+        System.out.println("SUBJECT: "+markEvent.getSubject());
+        System.out.println("MARKS: "+markEvent.getMarks());
+
+        if (markEvent.getMarks() >= 40){
+            System.out.println("RESULT: PASS");
+        }else {
+            System.out.println("RESULT: FAIL");
+        }
+        System.out.println("==============================-");
     }
 }
