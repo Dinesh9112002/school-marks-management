@@ -14,17 +14,17 @@ public class MarkController {
 
     private final MarkService markService;
 
-    public MarkController (MarkService markService){
+    public MarkController(MarkService markService) {
         this.markService = markService;
     }
 
     @PostMapping
-    public Mark createMark(@Valid @RequestBody MarkRequest markRequest){
+    public Mark createMark(@Valid @RequestBody MarkRequest markRequest) {
         return markService.createMark(markRequest);
     }
 
     @GetMapping("/student/{studentId}")
-    public List<Mark> getMarksByStudentId(@PathVariable Long studentId){
+    public List<Mark> getMarksByStudentId(@PathVariable Long studentId) {
         return markService.getMarkByStudentId(studentId);
     }
 }

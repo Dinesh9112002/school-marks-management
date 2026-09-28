@@ -12,12 +12,12 @@ public class KafkaTestController {
 
     private final MarkProducer markProducer;
 
-    public KafkaTestController(MarkProducer markProducer){
-        this.markProducer =markProducer;
+    public KafkaTestController(MarkProducer markProducer) {
+        this.markProducer = markProducer;
     }
 
     @PostMapping("/send")
-    public String sendMessage(@RequestParam String message){
+    public String sendMessage(@RequestParam String message) {
         markProducer.sendMessage(message);
         return "Message Sent to Kafka";
     }

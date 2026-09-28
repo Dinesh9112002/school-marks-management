@@ -1,6 +1,5 @@
 package com.school.marks.dto;
 
-
 public class MarkEvent {
 
     private Long studentId;

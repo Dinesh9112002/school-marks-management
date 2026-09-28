@@ -1,0 +1,6 @@
+2026-09-28 20:15:38.691066+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "STUDENT" not found (this database is empty); SQL statement:
+insert into student (age,class_name,email,name,id) values (?,?,?,?,default) [42104-240]
+2026-09-28 20:16:32.097786+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "STUDENT" not found (this database is empty); SQL statement:
+select s1_0.id,s1_0.age,s1_0.class_name,s1_0.email,s1_0.name from student s1_0 [42104-240]
